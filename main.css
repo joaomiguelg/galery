@@ -23,17 +23,22 @@ header button {
     height: 4vh;
     border-radius: 3px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 header button:hover {
-    background-color:rgba(75, 177, 68, 0.767);
+    background-color: rgba(75, 177, 68, 0.767);
 }
 
 form {
     background-color: rgb(99, 99, 99);
-    color: white;
+    color: rgb(255, 255, 255);
+    display: none;
+    padding: 16px 0;
+}
+
+#container {
     display: flex;
-    padding: 16px;
     justify-content: center;
     gap: 1em;
 }
@@ -45,14 +50,15 @@ input {
     outline: none;
 }
 
-#add-button{
+#add-button {
     width: 6vw;
     cursor: pointer;
     border: none;
     border-radius: 3px;
+    text-transform: uppercase;
 }
 
-#add-button:hover{
+#add-button:hover {
     background-color: rgb(179, 179, 179);
 }
 
@@ -62,9 +68,48 @@ input {
     border: none;
     border-radius: 3px;
     background-color: rgb(207, 56, 56);
-    color: white;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
 }
 
-#cancel-button:hover{
-    background-color:rgba(207, 56, 56, 0.712);
+#cancel-button:hover {
+    background-color: rgba(207, 56, 56, 0.712);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    max-height: 280px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+ul li img {
+    width: 100%;
+
+}
+
+.overlay-image-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.582);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.overlay-image-link a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+ul li:hover .overlay-image-link  {
+    opacity: 1;
 }

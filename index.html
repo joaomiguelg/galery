@@ -17,13 +17,27 @@
         <h1>Photo Galery</h1>
         <button type="button">New photo +</button>
     </header>
+
     <form>
-        <h2>Add new photo</h2>
-        <input type="url" required placeholder="URL photo" />
-        <button type="submit" id="add-button">Add</button>
-        <button type="reset" id="cancel-button">Cancel</button>
+        <div id="container">
+            <h2>Add new photo</h2>
+            <input type="url" required placeholder="URL photo" id="new-image-addres" />
+            <button type="submit" id="add-button">Add</button>
+            <button type="reset" id="cancel-button">Cancel</button>
+        </div>
     </form>
 
+    <ul>
+        <li>
+            <img src="">
+            <div class="overlay-image-link">
+                <a href="" title="" target="_blank"></a>
+            </div>
+        </li>    
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
